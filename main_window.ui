@@ -2,14 +2,6 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>718</width>
-    <height>287</height>
-   </rect>
-  </property>
   <property name="windowTitle">
    <string>Управление заданиями</string>
   </property>
@@ -25,45 +17,6 @@
       </property>
      </widget>
     </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="btnAddAssignment">
-        <property name="text">
-         <string>Добавить задание</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="btnEditAssignment">
-        <property name="text">
-         <string>Редактировать задание</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="btnViewVariants">
-        <property name="text">
-         <string>Просмотр вариантов</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="btnExportTest">
-        <property name="text">
-         <string>Экспортировать тест</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="btnManageStudents">
-        <property name="text">
-         <string>Редактировать учеников</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -71,12 +24,58 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>718</width>
+     <width>274</width>
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu_test">
+    <property name="title">
+     <string>Тест</string>
+    </property>
+    <addaction name="action_select_test"/>
+    <addaction name="action_export_pdf"/>
+   </widget>
+   <widget class="QMenu" name="menu_assignment">
+    <property name="title">
+     <string>Задание</string>
+    </property>
+    <addaction name="action_add_assignment"/>
+    <addaction name="action_edit_assignment"/>
+    <addaction name="action_delete_assignment"/>
+   </widget>
+   <addaction name="menu_test"/>
+   <addaction name="menu_assignment"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_add_assignment">
+   <property name="text">
+    <string>Добавить задание</string>
+   </property>
+  </action>
+  <action name="action_add_test">
+   <property name="text">
+    <string>Создать тест</string>
+   </property>
+  </action>
+  <action name="action_select_test">
+   <property name="text">
+    <string>Выбрать тест</string>
+   </property>
+  </action>
+  <action name="action_edit_assignment">
+   <property name="text">
+    <string>Редактировать задание</string>
+   </property>
+  </action>
+  <action name="action_export_pdf">
+   <property name="text">
+    <string>Экспортировать в .pdf</string>
+   </property>
+  </action>
+  <action name="action_delete_assignment">
+   <property name="text">
+    <string>Удалить задание</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
